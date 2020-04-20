@@ -23,6 +23,8 @@ stuLL_t* createNodeLinkedList(void)
 	
 	// DYNAMIC MEMORY ALOCATION IN HEAP USING MALLOC FUNCTION FOR STUDENT RECORD
 	stull_t* pNew= (stull_t*)malloc(sizeof(stull_t));
+	
+	// RETURN THE UPDATED VALUE OF STUDENT RECORD
 	return pNew;
 }
 
