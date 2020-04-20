@@ -17,15 +17,23 @@
 /*
  * (private) function creates a new node; if it returns NULL, malloc() was unable to do it!
  */
-stuLL_t* createNodeLinkedList(void)
+stuLL_t* createNodeLinkedList(stuRec_t stdata)
 {
 	// PROBLEM 1: SOLUTION
 	
 	// DYNAMIC MEMORY ALOCATION IN HEAP USING MALLOC FUNCTION FOR STUDENT RECORD
-	stull_t* pNew= (stull_t*)malloc(sizeof(stull_t));
-	
+	stull_t* pHEAD= (stull_t*)malloc(sizeof(stull_t));
+	if ( pHEAD!= NULL)
+	{
+		// ASSIGN THE NEW DATA TO THE NODE
+		pHEAD->data.fname= stdata.fname;
+		pHEAD->data.gname= stdata.gname;
+		pHEAD->data.grade= stdata.grade;
+		// INITALIZIE THE NEW POINTER TO THE NODE
+		pHEAD->pNEXT= NULL;
+	}
 	// RETURN THE UPDATED VALUE OF STUDENT RECORD
-	return pNew;
+	return pHEAD;
 }
 
 /*
