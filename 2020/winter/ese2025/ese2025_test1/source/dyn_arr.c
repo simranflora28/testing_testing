@@ -29,11 +29,11 @@ int comparo_fName(const void *pA, const void *pB)
 	stuDA_t student_B = *((stuDA_t*) pB);
 
 	// GET STUDENT FAMILY NAME
-	char *gName_A = student_A.data.fName;
-	char *gName_B = student_B.data.fName;
+	char *fName_A = student_A.data.fName;
+	char *fName_B = student_B.data.fName;
         
 	// RETURN OF STRING BY STRCMP FUNCTION USING DATA(fNAME_A) AND (fNAME_B)
-	return strcmp(gName_A, gName_B);
+	return strcmp(fName_A, fName_B);
 }
 
 /*
@@ -61,6 +61,16 @@ int comparo_grade(const void *pA, const void *pB)
 {
 	// PROBLEM #4: SOLUTION
 	
+	// EXTRATING STUDENT RECORD
+	stuDA_t student_A = *((stuDA_t*) pA);
+	stuDA_t student_B = *((stuDA_t*) pB);
+
+	// GET STUDENT GRADE FOR COMPARISON 
+	float *grade_A = student_A.data.grade;
+	float *grade_B = student_B.data.grade;
+        
+	// RETURN OF STRING BY STRCMP FUNCTION USING DATA(grade_A) AND (garde_B)
+	return strcmp(grade_A, grade_B);
 }
 
 /*
