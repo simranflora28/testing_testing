@@ -22,8 +22,18 @@
 int comparo_fName(const void *pA, const void *pB)
 {
 
-	// PROBLEM #3: complete the code for this function
-	//	       NOTE: PLEASE COMMIT CHANGES ONCE YOUR DONE THIS FUNCTION
+	// PROBLEM #3: SOLUTION
+	
+	// extract student records
+	stuDA_t student_A = *((stuDA_t*) pA);
+	stuDA_t student_B = *((stuDA_t*) pB);
+
+	// get student given names
+	char *gName_A = student_A.data.fName;
+	char *gName_B = student_B.data.fName;
+        
+	// RETURN OF STRING BY STRCMP FUNCTION USING DATA(fNAME_A) AND (fNAME_B)
+	return strcmp(gName_A, gName_B);
 }
 
 /*
