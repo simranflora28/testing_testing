@@ -82,19 +82,22 @@ stuDA_t* formDynamicArray(stuLL_t *pHEAD_LL, size_t student_count)
 stuDA_t* sortDynamicArray(stuDA_t *pHEAD, const sort_t sort_type,
 		const size_t array_size)
 {
-	// PROBLEM #5: complete the code for this function
-	//	       NOTE: PLEASE COMMIT CHANGES ONCE YOUR DONE THIS FUNCTION
+	// PROBLEM #5: SOLUTION
 
 	switch (sort_type)
 	{
 	case fNamesort:
+			// SORTING STUDENT RECORD BY FAMILY NAME 
 		qsort(pHEAD, array_size, sizeof(stuRec_t), comparo_fName);
 		break;
 	case gNamesort:
+			// SORTING STUDENT RECORD BY GIVEN NAME
 		qsort(pHEAD, array_size, sizeof(stuRec_t), comparo_gName);
 		break;
 	case gradesort:
-		// fill the code here for Part b)
+			//SORTING STUDENT RECORD BY GRADES
+		qsort(pHEAD, array_size, sizeof(stuRec_t), comparo_fName);
+		break;
 	}
 	return pHEAD;
 }
