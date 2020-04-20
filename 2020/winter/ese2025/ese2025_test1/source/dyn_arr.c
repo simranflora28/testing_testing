@@ -96,7 +96,7 @@ stuDA_t* sortDynamicArray(stuDA_t *pHEAD, const sort_t sort_type,
 		break;
 	case gradesort:
 			//SORTING STUDENT RECORD BY GRADES
-		qsort(pHEAD, array_size, sizeof(stuRec_t), comparo_fName);
+		qsort(pHEAD, array_size, sizeof(stuRec_t), comparo_grade);
 		break;
 	}
 	return pHEAD;
