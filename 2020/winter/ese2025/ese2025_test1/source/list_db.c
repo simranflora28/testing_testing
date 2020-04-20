@@ -21,7 +21,8 @@ stuLL_t* createNodeLinkedList(void)
 {
 	// PROBLEM 1: SOLUTION
 	
-	stull_t* pNew= (stull_t*malloc(sizeof(stull_t));
+	// DYNAMIC MEMORY ALOCATION IN HEAP USING MALLOC FUNCTION FOR STUDENT RECORD
+	stull_t* pNew= (stull_t*)malloc(sizeof(stull_t));
 	return pNew;
 }
 
