@@ -24,11 +24,11 @@ int comparo_fName(const void *pA, const void *pB)
 
 	// PROBLEM #3: SOLUTION
 	
-	// extract student records
+	// EXTRATING STUDENT RECORD
 	stuDA_t student_A = *((stuDA_t*) pA);
 	stuDA_t student_B = *((stuDA_t*) pB);
 
-	// get student given names
+	// GET STUDENT FAMILY NAME
 	char *gName_A = student_A.data.fName;
 	char *gName_B = student_B.data.fName;
         
